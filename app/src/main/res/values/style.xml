@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SpinnerDropdownStyle" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:popupBackground">#6200EE</item>
+    </style>
+</resources>

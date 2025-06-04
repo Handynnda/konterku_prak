@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DefaultColor"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="930dp"
+        android:background="@color/DefaultColor"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textAlignment="center"
+            android:layout_marginTop="120dp"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="78dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="email"/>
+
+        <LinearLayout
+            android:id="@+id/Username"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="75dp"
+            android:gravity="center"
+            android:elevation="10dp"
+            android:background="@color/white"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iconuser"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_gmail" />
+
+            <AutoCompleteTextView
+                android:id="@+id/TextEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Masukan Email"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textsandi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="78dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Kata Sandi"/>
+
+        <LinearLayout
+            android:id="@+id/Password"
+            android:layout_marginTop="5dp"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginStart="75dp"
+            android:gravity="center"
+            android:elevation="10dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/iconpass"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/lock" />
+
+            <EditText
+                android:id="@+id/TextPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Masukan Kata Sandi"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/LupaSandi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="230dp"
+            android:text="Lupa kata sandi?"
+            android:textColor="@color/textblue"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/buttonLogin"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/tombol"
+            android:elevation="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:elevation="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:indeterminate="true"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:layout_weight="2"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Atau"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="2"
+                android:background="@color/black" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="135dp"
+                android:textStyle="bold"
+                android:text="Belum Punya Akun?" />
+
+            <TextView
+                android:id="@+id/textDaftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/textblue"
+                android:text="Daftar" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

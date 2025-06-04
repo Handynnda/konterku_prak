@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1046115457008",
+    "project_id": "konterku-790ad",
+    "storage_bucket": "konterku-790ad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046115457008:android:178b3e1d8a71d8fdb06f35",
+        "android_client_info": {
+          "package_name": "com.example.konterku"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaukQ6ClBI_II3ACjjzOZeft3b2fKn3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

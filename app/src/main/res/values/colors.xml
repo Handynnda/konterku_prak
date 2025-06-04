@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna Dasar -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Warna Utama -->
+    <color name="primaryColor">#214EF3</color>
+
+    <!-- Warna Hint -->
+    <color name="hintColor">#9E9E9E</color>
+
+    <!-- Warna Latar Belakang -->
+    <color name="DefaultColor">#DDE2E4</color>
+
+    <!-- Warna Error -->
+    <color name="redColor">#FF0000</color>
+
+    <!-- Warna Blue -->
+    <color name="textblue">#0000FE</color>
+
+
+</resources>
