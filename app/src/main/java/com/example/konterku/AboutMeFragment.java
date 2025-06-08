@@ -31,7 +31,6 @@ public class AboutMeFragment extends Fragment {
     // Deklarasi variabel untuk elemen UI
     private TextView textAkun, textEmail, textNamaLengkap, textTanggal;
     private ImageView imageViewProfile;
-    private Button buttonGantiSandi, buttonHapusAkun;
 
     // Deklarasi variabel Firebase
     private FirebaseAuth firebaseAuth;
@@ -49,8 +48,6 @@ public class AboutMeFragment extends Fragment {
         textNamaLengkap = view.findViewById(R.id.textnamalengkap);
         textTanggal = view.findViewById(R.id.texttanggal);
         imageViewProfile = view.findViewById(R.id.imageView);
-        buttonGantiSandi = view.findViewById(R.id.buttongantisandi);
-        buttonHapusAkun = view.findViewById(R.id.buttonhapusakun);
 
         // Inisialisasi Firebase
         firebaseAuth = FirebaseAuth.getInstance();
@@ -88,53 +85,6 @@ public class AboutMeFragment extends Fragment {
         } else {
             Toast.makeText(requireContext(), "Anda belum login. Harap login terlebih dahulu.", Toast.LENGTH_SHORT).show();
         }
-
-        // Fungsi ganti sandi
-        buttonGantiSandi.setOnClickListener(v -> {
-            if (currentUser != null) {
-                String email = currentUser.getEmail();
-                if (!TextUtils.isEmpty(email)) {
-                    firebaseAuth.sendPasswordResetEmail(email)
-                            .addOnCompleteListener(task -> {
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(requireContext(), "Email reset sandi telah dikirim ke " + email, Toast.LENGTH_LONG).show();
-                                } else {
-                                    Toast.makeText(requireContext(), "Gagal mengirim email reset sandi.", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                }
-            }
-        });
-
-        // Fungsi hapus akun
-        buttonHapusAkun.setOnClickListener(v -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
-            builder.setTitle("Konfirmasi");
-            builder.setMessage("Apakah Anda yakin ingin menghapus akun ini?");
-            builder.setPositiveButton("Ya", (dialog, which) -> {
-                if (currentUser != null) {
-                    String userId = currentUser.getUid();
-                    databaseReference.removeValue().addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            currentUser.delete().addOnCompleteListener(deleteTask -> {
-                                if (deleteTask.isSuccessful()) {
-                                    Toast.makeText(requireContext(), "Akun berhasil dihapus.", Toast.LENGTH_LONG).show();
-                                    startActivity(new Intent(requireContext(), Login.class));
-                                    requireActivity().finish();
-                                } else {
-                                    Toast.makeText(requireContext(), "Gagal menghapus akun: " + deleteTask.getException().getMessage(), Toast.LENGTH_LONG).show();
-                                }
-                            });
-                        } else {
-                            Toast.makeText(requireContext(), "Gagal menghapus data pengguna dari database.", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-            });
-            builder.setNegativeButton("Batal", (dialog, which) -> dialog.dismiss());
-            builder.show();
-        });
-
         return view;
     }
 }

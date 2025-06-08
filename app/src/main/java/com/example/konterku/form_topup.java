@@ -58,9 +58,7 @@ public class form_topup extends AppCompatActivity {
             RadioButton rbSelected = findViewById(selectedId);
             String metode = rbSelected.getText().toString();
 
-            if (metode.equalsIgnoreCase("QRIS")) {
-                showQrisDialog(nominalStr);
-            } else if (metode.equalsIgnoreCase("Bank Transfer")) {
+            if (metode.equalsIgnoreCase("Bank Transfer")) {
                 showInfoDialog("Bank Transfer",
                         "Silakan transfer ke rekening berikut:\n\n" +
                                 "🏦 BRI\nNomor Rekening: 412701032284537\nAtas Nama: Handy Nanda Fachrizal\n\n" +
@@ -76,17 +74,6 @@ public class form_topup extends AppCompatActivity {
                 showConfirmationDialog(metode, nominalStr);
             }
         });
-    }
-
-    private void showQrisDialog(String nominalStr) {
-        View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_qris, null);
-
-        new AlertDialog.Builder(this)
-                .setTitle("QRIS Payment")
-                .setView(dialogView)
-                .setPositiveButton("Lanjut", (dialog, which) -> handleTopUp())
-                .setNegativeButton("Batal", null)
-                .show();
     }
 
     private void showInfoDialog(String title, String message, String nominalStr) {
