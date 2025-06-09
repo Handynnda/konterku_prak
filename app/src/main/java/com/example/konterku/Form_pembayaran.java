@@ -93,7 +93,6 @@ public class Form_pembayaran extends AppCompatActivity {
                                 .addOnSuccessListener(unused -> {
                                     simpanDataKeFirebase();
 
-                                    // Perbarui SharedPreferences
                                     SharedPreferences.Editor editor = getSharedPreferences("user_data", MODE_PRIVATE).edit();
                                     editor.putInt("saldo", saldoBaru);
                                     editor.apply();
@@ -101,10 +100,10 @@ public class Form_pembayaran extends AppCompatActivity {
                                     showSuccessDialog();
                                 });
                     } else {
-                        showFailedDialog("Saldo tidak cukup untuk melakukan transaksi ini.");
+                        showFailedDialog("Saldo tidak cukup untuk melakukan transaksi ini,silahkan isi saldo terlebih dahulu.");
                     }
                 } else {
-                    showFailedDialog("Saldo belum tersedia di sistem.");
+                    showFailedDialog("Saldo belum tersedia di sistem,silahkan isi saldo terlebih dahulu.");
                 }
             }
 
@@ -115,7 +114,6 @@ public class Form_pembayaran extends AppCompatActivity {
         });
     }
 
-    // ✅ PERBAIKAN: Menyimpan ke Pembelian/{UID}/{autoID}
     private void simpanDataKeFirebase() {
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         DatabaseReference db = FirebaseDatabase.getInstance()
@@ -159,7 +157,11 @@ public class Form_pembayaran extends AppCompatActivity {
         builder.setTitle("Pembayaran Gagal");
         builder.setMessage(message);
         builder.setCancelable(false);
-        builder.setPositiveButton("OK", null);
+        builder.setPositiveButton("OK", (dialog, which) -> {
+            Intent intent = new Intent(Form_pembayaran.this, form_topup.class);
+            startActivity(intent);
+            finish();
+        });
         builder.show();
     }
 

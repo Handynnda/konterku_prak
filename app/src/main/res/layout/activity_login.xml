@@ -114,22 +114,12 @@
         </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/LupaSandi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="230dp"
-            android:text="Lupa kata sandi?"
-            android:textColor="@color/textblue"
-            android:textStyle="bold" />
-
         <LinearLayout
             android:id="@+id/buttonLogin"
             android:layout_width="250dp"
             android:layout_height="36dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="80dp"
             android:background="@drawable/tombol"
             android:elevation="15dp"
             android:orientation="vertical">

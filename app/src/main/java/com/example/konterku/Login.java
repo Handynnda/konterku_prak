@@ -28,7 +28,7 @@ public class Login extends AppCompatActivity {
     private AutoCompleteTextView textEmail;
     private EditText textPass;
     private LinearLayout buttonLogin;
-    private TextView lupaSandi, daftar;
+    private TextView daftar;
     private ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
@@ -45,7 +45,6 @@ public class Login extends AppCompatActivity {
         textEmail = findViewById(R.id.TextEmail);
         textPass = findViewById(R.id.TextPass);
         buttonLogin = findViewById(R.id.buttonLogin);
-        lupaSandi = findViewById(R.id.LupaSandi);
         daftar = findViewById(R.id.textDaftar);
         progressBar = findViewById(R.id.progressBar);
 
@@ -63,15 +62,6 @@ public class Login extends AppCompatActivity {
                 } else {
                     loginWithFirebase(email, password);
                 }
-            }
-        });
-
-        // Set listener untuk "Lupa Kata Sandi"
-        lupaSandi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Login.this, Lupasandi.class);
-                startActivity(intent);
             }
         });
 

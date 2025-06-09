@@ -32,7 +32,6 @@
                         android:layout_height="40dp"
                         android:textSize="30sp"
                         android:textStyle="bold"
-                        android:paddingStart="30dp"
                         android:textColor="@color/black"
                         android:textAlignment="center"
                         android:background="@drawable/rounded_corner3"
