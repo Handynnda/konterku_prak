@@ -10,10 +10,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginEnd="22dp"
-        android:layout_marginStart="22dp"
-        android:layout_height="wrap_content">
+        android:padding="16dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -21,132 +20,84 @@
             android:textSize="34sp"
             android:textAlignment="center"
             android:textStyle="bold"
-            android:layout_marginBottom="120dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/black"
-            android:text="Daftar"/>
+            android:text="Daftar" />
 
-        <TextView
+        <!-- Nama Lengkap -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Nama Lengkap"/>
+            android:layout_marginTop="12dp"
+            android:hint="Nama Lengkap">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextFullName"
                 android:layout_width="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_height="40dp"
-                android:background="@color/white"
-                android:hint="Masukkan Nama Lengkap"
-                android:text="" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
+        <!-- Tanggal Register -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="12dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Tanggal Register"/>
+            android:layout_marginTop="12dp"
+            android:hint="Tanggal Register">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextTanggalRegister"
                 android:layout_width="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_height="40dp"
-                android:background="@color/white"
-                android:hint="Pilih Tanggal Register"
-                android:text=""
+                android:layout_height="wrap_content"
                 android:inputType="none"
                 android:focusable="false"
-                android:clickable="true"/>
-        </LinearLayout>
+                android:clickable="true" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-
-        <TextView
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="12dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Alamat Email"/>
+            android:layout_marginTop="12dp"
+            android:hint="Alamat Email">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginStart="20dp"
-                android:background="@color/white"
-                android:hint="Masukkan Alamat Email"
-                android:inputType="textEmailAddress"
-                android:text="" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
+        <!-- Kata Sandi -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="12dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Kata Sandi"/>
+            android:layout_marginTop="12dp"
+            android:hint="Kata Sandi">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginStart="20dp"
-                android:background="@color/white"
-                android:hint="Masukkan Kata Sandi"
-                android:inputType="textPassword"
-                android:text="" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
+        <!-- Konfirmasi Kata Sandi -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="12dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Konfirmasi Kata Sandi"/>
+            android:layout_marginTop="12dp"
+            android:hint="Konfirmasi Kata Sandi">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextConfirmPassword"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginStart="20dp"
-                android:background="@color/white"
-                android:hint="Masukkan Konfirmasi Kata Sandi"
-                android:inputType="textPassword"
-                android:text="" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Tombol Daftar -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/daftar"
             android:layout_width="match_parent"
@@ -155,68 +106,60 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:layout_marginTop="24dp"
-            android:background="@drawable/tombol"/>
+            android:background="@drawable/tombol" />
 
+        <!-- Atau -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2"
+                android:layout_marginEnd="8dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:orientation="horizontal">
+                android:text="Atau"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="8dp" />
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="2"
-                    android:background="@color/black" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2"
+                android:layout_marginStart="8dp"
+                android:background="@color/black" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Atau"
-                    android:textColor="@color/black"
-                    android:textAlignment="center" />
+        <!-- Sudah punya akun -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp">
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="12dp"
-                    android:layout_weight="2"
-                    android:background="@color/black" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="24dp"
-                android:orientation="horizontal">
+                android:text="Sudah punya akun?"
+                android:textColor="@color/black" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Sudah punya akun?"
-                    android:textColor="@color/black"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/tombol_1"
-                    android:layout_width="wrap_content"
-                    android:text=" Masuk"
-                    android:textColor="@color/textblue"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/tombol_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Masuk"
+                android:textColor="@color/textblue"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
